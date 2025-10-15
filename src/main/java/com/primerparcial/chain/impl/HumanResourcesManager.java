@@ -12,7 +12,7 @@ public class HumanResourcesManager extends InCharge {
     }
 
     @Override
-    public boolean processTypeComplex(){ return true; }
+    public boolean processTypeDefault(){ return true; }
 
 
 }

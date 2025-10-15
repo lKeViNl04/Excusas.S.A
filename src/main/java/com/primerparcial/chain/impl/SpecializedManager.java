@@ -12,16 +12,7 @@ public class SpecializedManager extends InCharge {
     }
 
     @Override
-    public boolean processTypeTrivial(){ return true; }
-
-    @Override
-    public boolean processTypeComplex(){ return true; }
-
-    @Override
-    public boolean processTypeImplausible(){ return true; }
-
-    @Override
-    public boolean processTypeModerate(){ return true; }
+    public boolean processTypeDefault(){ return true; }
 
     @Override
     public void processExcuse(Excuse excuse, EmailSender emailSender) {

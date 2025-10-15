@@ -2,8 +2,8 @@ package com.primerparcial.chain.impl;
 
 import com.primerparcial.chain.InCharge;
 import com.primerparcial.excuse.Excuse;
+import com.primerparcial.excuse.type.TrivialExcuse;
 import com.primerparcial.strategy.Strategy;
-import com.primerparcial.utils.EmailSender;
 
 public class AreaSupervisor extends InCharge {
 
@@ -13,6 +13,6 @@ public class AreaSupervisor extends InCharge {
     }
 
     @Override
-    public boolean processTypeModerate(){ return true; }
+    public boolean processTypeDefault(){ return true; }
 
 }

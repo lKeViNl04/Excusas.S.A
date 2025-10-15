@@ -16,7 +16,7 @@ public class LineInCharge {
         this.inCharge = inCharge;
     }
 
-    public void handlerExcuse(Excuse excuse, EmailSender emailSender) {
-        this.inCharge.handlerExcuse(excuse, emailSender);
+    public void handlerExcuse(Excuse excuse) {
+        this.inCharge.handlerExcuse(excuse);
     }
 }

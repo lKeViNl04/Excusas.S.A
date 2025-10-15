@@ -10,8 +10,12 @@ public class FamilyEmergency extends ModerateExcuse {
     }
 
     @Override
-    public void executeProcess(Excuse excuse, EmailSender emailSender) {
-        emailSender.sendEmail(excuse.getEmployee().getEmail(),"Excusas.S.A.@gmail.com",
-                "concern to the employee","is everything okay?");
+    protected String getAffair() {
+        return "concern to the employee";
+    }
+
+    @Override
+    protected String getBody() {
+        return "is everything okay?";
     }
 }

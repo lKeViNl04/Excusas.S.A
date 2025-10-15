@@ -10,7 +10,7 @@ public class Receptionist extends InCharge {
     }
 
     @Override
-    public boolean processTypeTrivial(){ return true; }
+    public boolean processTypeDefault(){ return true; }
 
 }
 

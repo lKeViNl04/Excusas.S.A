@@ -10,7 +10,6 @@ import com.primerparcial.utils.EmailSender;
 
 public class CEO extends InCharge implements Subscriber {
 
-
     protected CEO(String name, String email, Long legajo, Strategy strategy) {
         super(name, email, legajo, strategy);
     }
@@ -20,13 +19,11 @@ public class CEO extends InCharge implements Subscriber {
 
     @Override
     public void processExcuse(Excuse excuse, EmailSender emailSender) {
-        excuse.getTypeExcuse().executeProcess(excuse, emailSender);
+        excuse.executeProcess(excuse, emailSender);
         Prontuario newProntuario = new Prontuario(excuse.getEmployee(),excuse);
         ProntuarioAdministrator.getInstance().addProntuario(newProntuario);
     }
 
     @Override
-    public void update() {
-        System.out.println("Se ha agregado un nuevo prontuario");
-    }
+    public void update() { System.out.println("A new prontuario has been added");}
 }
