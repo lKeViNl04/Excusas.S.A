@@ -10,8 +10,17 @@ public class PowerOutage extends ModerateExcuse {
     }
 
     @Override
-    public void executeProcess(Excuse excuse, EmailSender emailSender) {
-        emailSender.sendEmail("EDESUR@mailfake.com.ar","Excusas.S.A.@gmail.com",
-                "question about the blackout","was there a blackout in such neighborhood?");
+    protected String getDestinationEmail(Excuse excuse){
+        return "EDESUR@mailfake.com.ar";
+    }
+
+    @Override
+    protected String getAffair() {
+        return "question about the blackout";
+    }
+
+    @Override
+    protected String getBody() {
+        return "was there a blackout in such neighborhood?";
     }
 }

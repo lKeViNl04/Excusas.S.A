@@ -1,18 +1,25 @@
 package com.primerparcial.excuse.type;
 
 import com.primerparcial.chain.InCharge;
-import com.primerparcial.excuse.Excuse;
-import com.primerparcial.utils.EmailSender;
 
-public abstract class ComplexExcuse implements TypeExcuse{
-    @Override
-    public boolean processType(InCharge inCharge) {
-        return inCharge.processTypeComplex();
+public class ComplexExcuse extends BaseTypeExcuse{
+
+    public ComplexExcuse() {
+        super();
     }
 
     @Override
-    public void executeProcess(Excuse excuse, EmailSender emailSender) {
-        emailSender.sendEmail(excuse.getEmployee().getEmail(),"Excusas.S.A.@gmail.com",
-                "Excuse Complex","the license was accepted");
+    public boolean processType(InCharge inCharge) {
+        return inCharge.processTypeDefault();
+    }
+
+    @Override
+    protected String getAffair() {
+        return "Excuse Complex";
+    }
+
+    @Override
+    protected String getBody() {
+        return "the license was accepted";
     }
 }

@@ -1,7 +1,9 @@
 package com.primerparcial.excuse;
 
 import com.primerparcial.Employee;
+import com.primerparcial.chain.InCharge;
 import com.primerparcial.excuse.type.TypeExcuse;
+import com.primerparcial.utils.EmailSender;
 
 public class Excuse {
     private Employee employee;
@@ -14,7 +16,12 @@ public class Excuse {
     public Employee getEmployee() {
         return employee;
     }
-    public TypeExcuse getTypeExcuse() {
-        return typeExcuse;
+
+    public boolean procesarType(InCharge inCharge) {
+        return  this.typeExcuse.processType(inCharge);
+    }
+
+    public void executeProcess(Excuse excuse , EmailSender emailSender) {
+        this.typeExcuse.executeProcess(excuse , emailSender);
     }
 }

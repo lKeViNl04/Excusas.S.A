@@ -40,7 +40,7 @@ public class BuilderLineInCharge implements Builder{
     }
     @Override
     public void reset() {
-        result = null;
+        result = new LineInCharge();
         head = null;
         tail = null;
     }
