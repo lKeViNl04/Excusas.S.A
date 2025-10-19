@@ -1,7 +1,7 @@
 package com.primerparcial;
 
-import com.primerparcial.excuse.Excuse;
-import com.primerparcial.excuse.type.TypeExcuse;
+import com.primerparcial.Excuse;
+import com. primerparcial.typeExcuse.TypeExcuse;
 
 public abstract class Employee {
 
