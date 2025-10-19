@@ -1,7 +1,8 @@
 package com.primerparcial.builder;
 
-import com.primerparcial.chain.InCharge;
-import com.primerparcial.chain.impl.*;
+import com.primerparcial.LineInCharge;
+import com.primerparcial.inchargers.InCharge;
+import com.primerparcial.inchargers.*;
 
 public class BuilderLineInCharge implements Builder{
     private LineInCharge result;
@@ -13,7 +14,7 @@ public class BuilderLineInCharge implements Builder{
     }
 
     public void addHandler( InCharge inCharge ){
-        if( inCharge != null ){
+        if( head == null ){
             head = inCharge;
             tail = inCharge;
         }else{
@@ -35,9 +36,6 @@ public class BuilderLineInCharge implements Builder{
     public void addCEO(CEO inCharge){
         this.addHandler(inCharge);
     }
-    public void addSpecializedManager(SpecializedManager inCharge){
-        this.addHandler(inCharge);
-    }
     @Override
     public void reset() {
         result = new LineInCharge();
@@ -47,6 +45,8 @@ public class BuilderLineInCharge implements Builder{
 
     @Override
     public LineInCharge build() {
+        SpecializedManager specializedManager = new SpecializedManager("SpecializedManager","SpecializedManager@gmail.com", 99999999L);
+        this.addHandler(specializedManager);
         this.result.addInCharge(head);
         return result;
     }
