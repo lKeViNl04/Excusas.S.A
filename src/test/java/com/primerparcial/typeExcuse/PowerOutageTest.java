@@ -1,8 +1,7 @@
 package com.primerparcial.typeExcuse;
 
-import com.primerparcial.typeExcuse.TypeExcuse;
-import com.primerparcial.typeExcuse.TypeExcuseTestBase;
-import com.primerparcial.typeExcuse.impl.PowerOutage;
+import com.primerparcial.excuse.typeexcuse.TypeExcuse;
+import com.primerparcial.excuse.typeexcuse.impl.PowerOutage;
 
 public class PowerOutageTest extends TypeExcuseTestBase {
     @Override

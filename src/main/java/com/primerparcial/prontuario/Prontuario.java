@@ -1,7 +1,7 @@
 package com.primerparcial.prontuario;
 
-import com.primerparcial.Employee;
-import com.primerparcial.Excuse;
+import com.primerparcial.employee.Employee;
+import com.primerparcial.excuse.Excuse;
 
 public class Prontuario {
     private Employee employee;
@@ -10,5 +10,12 @@ public class Prontuario {
     public Prontuario(Employee employee, Excuse excuse) {
         this.employee = employee;
         this.excuse = excuse;
+    }
+
+    @Override
+    public String toString() {
+        return "Prontuario{ "+ employee.toString() +
+                ", " + excuse.toString() +
+                '}';
     }
 }

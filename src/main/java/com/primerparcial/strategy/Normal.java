@@ -1,7 +1,7 @@
 package com.primerparcial.strategy;
 
-import com.primerparcial.inchargers.InCharge;
-import com.primerparcial.Excuse;
+import com.primerparcial.employee.incharge.InCharge;
+import com.primerparcial.excuse.Excuse;
 import com.primerparcial.email.EmailSender;
 
 public class Normal implements Strategy {

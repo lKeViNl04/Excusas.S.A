@@ -1,6 +1,6 @@
 package com.primerparcial.prontuario;
 
-import com.primerparcial.observer.Observable;
+import com.primerparcial.prontuario.observer.Observable;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -30,7 +30,6 @@ public class ProntuarioAdministrator extends Observable {
 
     public void addProntuario(Prontuario prontuario){
         prontuarios.add(prontuario);
-        notifySubscribers();
+        notifySubscribers(prontuario);
     }
-
 }

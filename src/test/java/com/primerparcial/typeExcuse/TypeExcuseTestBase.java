@@ -1,8 +1,9 @@
 package com.primerparcial.typeExcuse;
 
-import com.primerparcial.Employee;
-import com.primerparcial.Excuse;
+import com.primerparcial.employee.Employee;
+import com.primerparcial.excuse.Excuse;
 import com.primerparcial.email.EmailSender;
+import com.primerparcial.excuse.typeexcuse.TypeExcuse;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
