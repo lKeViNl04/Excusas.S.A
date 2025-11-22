@@ -1,8 +1,7 @@
 package com.primerparcial.typeExcuse;
 
-import com.primerparcial.typeExcuse.TypeExcuse;
-import com.primerparcial.typeExcuse.TypeExcuseTestBase;
-import com.primerparcial.typeExcuse.impl.FamilyEmergency;
+import com.primerparcial.excuse.typeexcuse.TypeExcuse;
+import com.primerparcial.excuse.typeexcuse.impl.FamilyEmergency;
 
 public class FamilyEmergencyTest extends TypeExcuseTestBase {
     @Override

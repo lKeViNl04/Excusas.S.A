@@ -1,6 +1,6 @@
 package com.primerparcial.prontuario;
 
-import com.primerparcial.observer.Subscriber;
+import com.primerparcial.prontuario.observer.Subscriber;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
@@ -52,8 +52,8 @@ class ProntuarioAdministratorTest {
         admin.addSubscriber(mockSubscriber1);
         admin.addSubscriber(mockSubscriber2);
         admin.addProntuario(mockProntuario);
-        verify(mockSubscriber1, times(1)).update();
-        verify(mockSubscriber2, times(1)).update();
+        verify(mockSubscriber1, times(1)).update(mockProntuario);
+        verify(mockSubscriber2, times(1)).update(mockProntuario);
     }
 
     @Test
@@ -63,7 +63,7 @@ class ProntuarioAdministratorTest {
         admin.addSubscriber(mockSubscriber2);
         admin.removeSubscriber(mockSubscriber2);
         admin.addProntuario(mockProntuario);
-        verify(mockSubscriber1, times(1)).update();
-        verify(mockSubscriber2, times(0)).update();
+        verify(mockSubscriber1, times(1)).update(mockProntuario);
+        verify(mockSubscriber2, times(0)).update(mockProntuario);
     }
 }

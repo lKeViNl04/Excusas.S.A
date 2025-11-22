@@ -1,5 +1,8 @@
 package com.primerparcial.typeExcuse;
 
+import com.primerparcial.excuse.typeexcuse.ImplausibleExcuse;
+import com.primerparcial.excuse.typeexcuse.TypeExcuse;
+
 public class ImplausibleExcuseTest extends TypeExcuseTestBase {
     @Override
     protected TypeExcuse createTypeExcuse() {
